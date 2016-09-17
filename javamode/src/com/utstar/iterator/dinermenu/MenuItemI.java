@@ -1,31 +1,26 @@
 package com.utstar.iterator.dinermenu;
 
-import java.util.Iterator;
-
-public class MenuItem extends MenuComponent{
+public class MenuItemI {
 	private String name;
-	private float price;
 	private String description;
 	private boolean isVegetarian;
-	public MenuItem(String name, String description,
-			boolean isVegetarian, float price) {
+	private double price;
+	public MenuItemI() {
+		super();
+	}
+	public MenuItemI(String name, String description, boolean isVegetarian,
+			double price) {
 		super();
 		this.name = name;
-		this.price = price;
 		this.description = description;
 		this.isVegetarian = isVegetarian;
+		this.price = price;
 	}
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public float getPrice() {
-		return price;
-	}
-	public void setPrice(float price) {
-		this.price = price;
 	}
 	public String getDescription() {
 		return description;
@@ -39,16 +34,17 @@ public class MenuItem extends MenuComponent{
 	public void setVegetarian(boolean isVegetarian) {
 		this.isVegetarian = isVegetarian;
 	}
-	@Override
-	public Iterator createIterator() {
-		return new NullIterator();
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
 	}
 	@Override
-	public void print() {
-		System.out.print("\n"+getName());
-		System.out.print("\n"+getDescription());
-		System.out.print("\n"+getPrice());
-		System.out.print("\n"+isVegetarian());
+	public String toString() {
+		return "MenuItem [name=" + name + ", description=" + description
+				+ ", isVegetarian=" + isVegetarian + ", price=" + price + "]";
 	}
+	
 	
 }

@@ -3,8 +3,8 @@ package com.utstar.iterator.dinermenu;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class DinerMenu implements Menu{
-	private ArrayList<MenuItem> items = new ArrayList<MenuItem>();
+public class DinerMenu implements MenuI{
+	private ArrayList<MenuItemI> items = new ArrayList<MenuItemI>();
 	public DinerMenu(){
 		addItem("rice", "this is rice", true, 1.0);
 		addItem("meat", "this is meat", false, 5.0);
@@ -12,7 +12,7 @@ public class DinerMenu implements Menu{
 		addItem("vegetable", "this is vegetable", true, 2.0);
 	}
 	public void addItem(String name,String description,boolean isVegetarian,double price){
-		MenuItem menuItem = new MenuItem(name, description, isVegetarian, price);
+		MenuItemI menuItem = new MenuItemI(name, description, isVegetarian, price);
 		items.add(menuItem);
 	}
 	@Override

@@ -3,11 +3,11 @@ package com.utstar.iterator.dinermenu;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class DinerIterator implements Iterator<MenuItem>{
-	private ArrayList<MenuItem> items;
+public class DinerIterator implements Iterator<MenuItemI>{
+	private ArrayList<MenuItemI> items;
 	private int count = 0;
 	
-	public DinerIterator(ArrayList<MenuItem> items) {
+	public DinerIterator(ArrayList<MenuItemI> items) {
 		super();
 		this.items = items;
 	}
@@ -20,8 +20,8 @@ public class DinerIterator implements Iterator<MenuItem>{
 		}
 	}
 	@Override
-	public MenuItem next() {
-		MenuItem menuItem = items.get(count);
+	public MenuItemI next() {
+		MenuItemI menuItem = items.get(count);
 		count++;
 		return menuItem;
 	}

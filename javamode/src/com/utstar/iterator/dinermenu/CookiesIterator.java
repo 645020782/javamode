@@ -2,10 +2,10 @@ package com.utstar.iterator.dinermenu;
 
 import java.util.Iterator;
 
-public class CookiesIterator implements Iterator<MenuItem>{
-	private MenuItem[] items;
+public class CookiesIterator implements Iterator<MenuItemI>{
+	private MenuItemI[] items;
 	private int count = 0;
-	public CookiesIterator(MenuItem[] items) {
+	public CookiesIterator(MenuItemI[] items) {
 		super();
 		this.items = items;
 	}
@@ -19,8 +19,8 @@ public class CookiesIterator implements Iterator<MenuItem>{
 	}
 
 	@Override
-	public MenuItem next() {
-		MenuItem menuItem = items[count];
+	public MenuItemI next() {
+		MenuItemI menuItem = items[count];
 		count++;
 		return menuItem;
 	}

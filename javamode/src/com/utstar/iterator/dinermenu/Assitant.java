@@ -11,10 +11,10 @@ public class Assitant {
 		System.out.println("=====diner=====");
 		printMenu(dinerMenu);
 	}
-	private void printMenu(Menu menu){
+	private void printMenu(MenuI menu){
 		Iterator it = menu.createIterator();
 		while(it.hasNext()){
-			MenuItem next = (MenuItem)it.next();
+			MenuItemI next = (MenuItemI)it.next();
 			System.out.println(next);
 		}
 	}
